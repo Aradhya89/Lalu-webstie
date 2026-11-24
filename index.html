@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+  <title>Maa Sheetla Mobile Center</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Manrope:wght@600;700&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+    id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-surface-variant": "#424752", "tertiary-fixed": "#dae3ef", "tertiary": "#464f59", "outline": "#727783", "on-tertiary-fixed": "#141c25", "on-background": "#0b1c30", "surface-container-lowest": "#ffffff", "tertiary-fixed-dim": "#bec7d3", "surface-container-highest": "#d3e4fe", "surface-container": "#e5eeff", "primary-fixed-dim": "#a9c7ff", "surface-container-low": "#eff4ff", "primary-container": "#1565c0", "inverse-primary": "#a9c7ff", "secondary-fixed-dim": "#b0c9e8", "on-primary-container": "#dae5ff", "background": "#f8f9ff", "tertiary-container": "#5e6771", "secondary-container": "#c7dfff", "on-primary": "#ffffff", "surface-variant": "#d3e4fe", "on-tertiary": "#ffffff", "outline-variant": "#c2c6d4", "on-tertiary-container": "#dde6f2", "surface-container-high": "#dce9ff", "on-secondary": "#ffffff", "on-secondary-fixed": "#011d35", "inverse-surface": "#213145", "secondary": "#49607c", "on-surface": "#0b1c30", "on-tertiary-fixed-variant": "#3f4851", "error-container": "#ffdad6", "surface-dim": "#cbdbf5", "on-secondary-container": "#4b637e", "surface-bright": "#f8f9ff", "primary": "#004d99", "on-secondary-fixed-variant": "#314863", "on-error-container": "#93000a", "error": "#ba1a1a", "secondary-fixed": "#d1e4ff", "on-primary-fixed-variant": "#00468c", "on-error": "#ffffff", "primary-fixed": "#d6e3ff", "surface-tint": "#005db7", "on-primary-fixed": "#001b3d", "surface": "#f8f9ff", "inverse-on-surface": "#eaf1ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter": "1.5rem", "space-4xl": "5.5rem", "space-lg": "1.5rem", "space-md": "1rem", "space-2xl": "3rem", "space-3xl": "4rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin": "1.5rem" }, "fontFamily": { "display-lg-mobile": ["Manrope"], "headline-sm": ["Manrope"], "headline-md": ["Manrope"], "label-lg": ["Inter"], "headline-lg": ["Manrope"], "headline-lg-mobile": ["Manrope"], "label-md": ["Inter"], "display-lg": ["Manrope"], "body-md": ["Inter"], "body-lg": ["Inter"], "body-sm": ["Inter"], "label-sm": ["Inter"] }, "fontSize": { "display-lg-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-sm": ["20px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }], "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.02em", "fontWeight": "500" }] } } } };</script>
+</head>
+
+<body class="bg-surface font-body-md text-body-md text-on-surface">
+  <header
+    class="fixed top-0 left-0 right-0 z-50 bg-surface-container-lowest border-b border-outline-variant shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div
+      class="h-16 md:h-[76px] max-w-7xl mx-auto px-gutter lg:px-space-xl flex items-center justify-between gap-space-md">
+      <a class="flex items-center gap-space-sm shrink-0" data-path="home" href="https://maasheetlamobile.lusa.co.in/"><img alt="Maa Sheetla Mobile Logo"
+          class="h-12 w-auto object-contain"
+          src="https://res.cloudinary.com/dehzenar0/image/upload/f_auto,q_auto:low,w_800/v1795528626/logo_by9ccv.png"><span
+          class="font-headline-sm text-headline-sm text-on-surface tracking-tight">Maa Sheetla Mobile</span></a>
+      <div class="hidden md:flex items-center gap-space-lg">
+        <nav class="flex items-center gap-space-sm"
+          data-active-classes="bg-primary-container text-on-primary-container rounded-lg"><a aria-current="page"
+            class="px-space-md py-space-sm font-label-lg transition-colors bg-primary-container text-on-primary-container rounded-lg"
+            data-path="home" href="#">Home</a><a
+            class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="services" href="#services">Services</a><a
+            class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="products" href="#products">Products</a><a
+            class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="about-us" href="#about">About Us</a><a
+            class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors"
+            data-path="contact" href="#contact">Contact</a></nav><a
+          class="inline-flex items-center gap-space-sm bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-lg py-space-sm rounded-xl font-label-lg text-label-lg transition-colors shrink-0"
+          href="https://wa.me/918319875589" rel="noopener noreferrer" target="_blank"><span
+            class="material-symbols-outlined text-[18px]">chat</span><span>WhatsApp</span></a>
+      </div>
+      <div class="flex md:hidden items-center gap-space-sm">
+<button
+          aria-label="Toggle navigation"
+          class="p-space-sm rounded-lg text-on-surface hover:bg-surface-container-high hover:text-on-surface transition-colors"
+          onclick="document.getElementById('mobile-nav-panel').classList.toggle('hidden')" type="button"><span
+            class="material-symbols-outlined">menu</span></button>
+      </div>
+    </div>
+    <div class="hidden md:hidden bg-surface-container-lowest border-t border-outline-variant px-gutter py-space-md"
+      id="mobile-nav-panel">
+      <nav class="flex flex-col gap-space-xs"
+        data-active-classes="bg-primary-container text-on-primary-container rounded-lg"><a aria-current="page"
+          class="px-space-md py-space-sm font-label-lg transition-colors bg-primary-container text-on-primary-container rounded-lg"
+          data-path="home" href="#">Home</a><a
+          class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors"
+          data-path="services" href="#services">Services</a><a
+          class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors"
+          data-path="products" href="#products">Products</a><a
+          class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors"
+          data-path="about-us" href="#about">About Us</a><a
+          class="px-space-md py-space-sm font-label-lg text-label-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface rounded-lg transition-colors"
+          data-path="contact" href="#contact">Contact</a></nav>
+      <div class="mt-space-md pt-space-md border-t border-outline-variant"><a
+          class="w-full inline-flex items-center justify-center gap-space-sm bg-primary text-on-primary hover:bg-primary-container hover:text-on-primary-container px-space-lg py-space-sm rounded-xl font-label-lg text-label-lg transition-colors"
+          href="https://wa.me/918319875589" rel="noopener noreferrer" target="_blank"><span
+            class="material-symbols-outlined text-[18px]">chat</span><span>Chat on WhatsApp</span></a></div>
+    </div>
+  </header>
+  <main class="w-full pt-16 md:pt-[76px] bg-surface">
+    <div class="flex flex-col w-full">
+      <!-- 1. HERO -->
+      <section class="w-full bg-surface py-space-2xl md:py-space-3xl lg:py-space-4xl">
+        <div class="max-w-[1200px] mx-auto px-[20px] md:px-[28px] lg:px-[44px]">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-2xl items-center min-h-[520px]">
+            <div class="flex flex-col gap-space-lg">
+              <span
+                class="inline-flex items-center gap-space-sm self-start bg-primary-fixed text-on-primary-fixed px-space-md py-space-xs rounded-full font-label-md text-label-md uppercase tracking-wider">
+                <span class="w-2 h-2 rounded-full bg-primary"></span>
+                YOUR LOCAL MOBILE EXPERT
+              </span>
+              <h1
+                class="font-display-lg-mobile text-display-lg-mobile lg:font-display-lg lg:text-display-lg text-on-surface">
+                Expert Mobile Repairing &amp; Sales Under One Roof
+              </h1>
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                From minor mobile issues to complex motherboard repairs, we provide reliable solutions for old and
+                latest smartphones.
+              </p>
+              <div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+                <a class="inline-flex items-center gap-space-sm bg-primary text-on-primary hover:bg-primary-container px-space-lg py-space-md rounded-xl font-label-lg text-label-lg shadow-md hover:shadow-lg transition-all"
+                  href="https://wa.me/918319875589" rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[20px]">chat</span>
+                  <span>Contact on WhatsApp</span>
+                </a>
+                <a class="inline-flex items-center gap-space-sm bg-surface-container-low text-primary hover:bg-surface-container px-space-lg py-space-md rounded-xl font-label-lg text-label-lg transition-colors"
+                  href="#services">
+                  <span>Explore Services</span>
+                  <span class="material-symbols-outlined text-[20px]">arrow_downward</span>
+                </a>
+              </div>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-md">
+                <div class="flex items-center gap-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+                  <span class="material-symbols-outlined text-primary text-[22px]">verified</span>
+                  <span class="font-label-lg text-label-lg text-on-surface">3 Years Experience</span>
+                </div>
+                <div class="flex items-center gap-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+                  <span class="material-symbols-outlined text-primary text-[22px]">workspace_premium</span>
+                  <span class="font-label-lg text-label-lg text-on-surface">Certified Technician</span>
+                </div>
+                <div class="flex items-center gap-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+                  <span class="material-symbols-outlined text-primary text-[22px]">devices</span>
+                  <span class="font-label-lg text-label-lg text-on-surface">All Major Mobile Brands</span>
+                </div>
+              </div>
+            </div>
+            <div class="w-full">
+              <div class="w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-xl bg-surface-container-low">
+                <img alt="Maa Sheetla Mobile Repairing Workshop" class="w-full h-full object-cover"
+                  src="https://res.cloudinary.com/dehzenar0/image/upload/f_auto,q_auto:low,w_800/v1795527901/landingphoto_qgg6cb.jpg">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 2. SERVICES -->
+      <section class="w-full bg-surface-container-lowest py-space-2xl md:py-space-3xl lg:py-space-4xl" id="services">
+        <div class="max-w-[1200px] mx-auto px-[20px] md:px-[28px] lg:px-[44px]">
+          <div class="flex flex-col gap-space-sm mb-space-2xl max-w-2xl">
+            <span class="font-label-md text-label-md text-primary uppercase tracking-wider">01 / REPAIR SERVICES</span>
+            <h2
+              class="font-headline-lg-mobile text-headline-lg-mobile lg:font-headline-lg lg:text-headline-lg text-on-surface">
+              Our Mobile Repairing Services
+            </h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+              Professional solutions for your everyday mobile problems.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md lg:gap-space-lg">
+            <!-- Card 1 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+              <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Close-up of a skilled technician carefully replacing a cracked smartphone OLED display screen on a clean blue anti-static repair mat, precision tools nearby, bright workshop lighting, crisp modern electronics photography."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIbNQz4Detn9rp8OYHXMWC-xGnztnjbZk8vNea4qZfF41XWZgXGJovssHoW7-SRPJ3q3UxmrK9v0dvfDqAvK8Jjzty4GSBwANtYqV3G4Yzh30CkXPxxBAPvUDSFG_di3OwVh90utSnvf_dNezcqsrhjJT0tz-sSrQNBd1oKTvwcHOmsGowKkHZVDLu72WTl6g42ygs69tUt2T8irueFr3J7oiuPJnIuFs66JO24Pw">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Display Replacement</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Cracked screens and display problems.</p>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+              <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Detailed macro shot of a smartphone motherboard under a stereo microscope with fine-tip soldering iron and tweezers performing micro-soldering IC repair, cool blue workshop tones, clean professional studio lighting."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuD28HY312i5yMwQxa-06yqy87qqO8q_0Sv6F2F4IYHfH5rROfy_s3hpSDMkZTL2TMzbKiPHyIRWKeQQ_NTV0llSAij2a-UN1O8BHqU5pdgEy8OPg9lfx1nbN28hCrqtAfJcnsd-yiHMwqK-VWeHPqT6H6-cdkQFUiFvJIPLBTShc5Diy0-nvDRyccPyISx21XQcMPTgVshyg_oGm2_Sj1vKERHLEOsXJy52Ej3h8FQ">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Motherboard Repair</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Advanced hardware diagnosis and repair.</p>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+              <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Technician inspecting and repairing a smartphone USB-C charging port pin connector using precision tweezers on a tidy blue ESD repair mat, bright clean lighting, realistic electronics service photography."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMJCn1D3ymQwjkaUOe7n-SG-OWxu0vB-hl32oqyPtHFcCqZSkpNS9TZObzw8YG0-aohAVhONBHb-QuZ1veVKLH07YPargSx7iiYiSkXDTMB4knxUhcVHTahg87QrA9f3jN0lWAS8qeebWI9Svg0IZjyCBiFdmPpuIv9KA4Kg9oNtVu1Rhfvi8sPPA39u1Qma3Fo1j56H3cberPYQyX_SzfQzYdoqev8CG0jY9xKWA">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Charging Pin Repair</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Fix charging ports and connection issues.
+                </p>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+              <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Fresh lithium-ion smartphone battery being installed into an open mobile phone chassis with plastic spudger tool on a clean white and blue repair bench, sharp focus, modern tech repair aesthetic."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKNoEoaRXFAXVSzuZRkA1FeJTmQ3iYbYbdT3ivzLYvXF6MvCQcFtu2dZdopOj_OnStYEa1xXY8ttjH5Q3-GkCBhUx3mmn1YHD0GBtgRuZxhxtGTTIIvRPfWXvOK0i_Ry2HFnYnj0263LKQNSDlmi8zUWWcFmBnbh_x4rKplnO91Er8cpEaFpzV99OIubZg4EeEVH0zEyeD4eVN4be2vBiQ9FaUSIinUd8HL3yUHys">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Battery Replacement</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Resolve battery and power problems.</p>
+              </div>
+            </div>
+            <!-- Card 5 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+              <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Close-up of a smartphone bottom speaker module and microphone flex cable being tested and cleaned with precision brush on a blue repair mat, bright natural workshop lighting, crisp detail."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCayNuwHjMqi1kiZtrcWz-lH8G09S4YFTPs3ALA31sMahMIKvO7uh9Hvr9k7CwgpwdD5q4OO0USdKh7I7CQCWzU4heh6gKdXkafew4loB4tUG3pAgZ67EErmcl1wdvOSK2ThuyOaJ1wI8v8WyywhvMEjOEACe5Vw2J_LKhNXpq3dVjFUdblSuu0NpGAaLNDvkZWDPANLPbs06pkFC6KJH-tkR-PYszNZL4nnWFURWA">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Speaker &amp; Microphone</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Fix sound and calling-related faults.</p>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+              <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Precision replacement of a multi-lens smartphone rear camera module on a clean workbench, technician wearing anti-static gloves, cool blue and white tones, sharp commercial photography."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEhXmx4csM0U5zoBPTyjEJKnwn5LZ82hIKXPcYwTFhst7KSlquTOGw3kUZTiiCPs9Feq0v-tabE3mjSCLZagI4VN4rL8ITWs-kaWIqu2nJQACkCMIqR9Kbm4tqUIH1favl7VHFJkOoszG8122sfW1wcHDuTpbHnZMHECJbxz8QOhqdLX-WtcBMCEkjqXwASSbqYpXKwamk0My5_PCr4sI3q3SbN2mdycvovTQsa3A">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Camera Repair</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Resolve front and rear camera problems.</p>
+              </div>
+            </div>
+            <!-- Card 7 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+              <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Smartphone connected via USB cable to a diagnostic laptop showing clean software flashing and system recovery progress bars on a bright modern repair desk, blue accent lighting."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWYBIJ-58D94951saVsRIcisLpip9xPot6eEo1SzLGoKt5572MvXY72KUl7Z0uxg73nf_bDPNYrzqWpbh2HsGQV_I6saMEPf_28ULbqovz9yYNLH-xhA8x0a7QBpZxzSJa3CyTNvg0UEs_eh2DtUV5EYRHIwGaVxAdbSNq7G1TLjb6oNF_hJOaAlc9UqNJdr8hPMF26eTuR4_qtsxI439482SuwnztAP-FpMAHKzg">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Software Repair</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Software troubleshooting and solutions.</p>
+              </div>
+            </div>
+            <!-- Card 8 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+              <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Disassembled smartphone logic board undergoing ultrasonic cleaning and isopropyl alcohol treatment to remove water corrosion, clean laboratory-style electronics repair bench, crisp lighting."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC442iMH7s0gsN7W5TqI8OHHGDE865yFegW5AHtW1gniwjIlVwFFlB4-SgwfGZ3eCHHmMU24idLFsgRFGccqW9UhU5KLn32x7fnSklD_KscGRKs37qSgcq83grK3A6wv_qrL48knx-sInML_FDUPLr44dPYuw3azsjnVLKXXyTbzobXPyVfHlgY0BLbFdn1dCyIfVrZ3oWIE-hKF2BjfsK-0w9VGLmXNayTMTF2zWA">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Water Damage Repair</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Diagnosis and treatment of liquid damage.
+                </p>
+              </div>
+            </div>
+            <!-- Card 9 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+              <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Digital DC power supply and multimeter probes testing a dead smartphone motherboard for short circuits on an organized repair station, clean blue and white color palette, high detail."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0mvBqM8Cz1ztP1giY-D6sE5T49tbqG7evNJrbsVanPqjOFvrfeSd41_uB_zBw7a2F043xvrATbLmxvMFiLgM3SRHekdrm0HDEoV9Azti-JSScU7-2pf-1S4yxXoF1J58vTbsXyinJ9wmR2PWDM4uQ9QPxex5m5xG-iZTxKQgCUgzBeADwijTCGniW212iSJkoln11oevTK3CxDqSWDaWQSQH3pvXbo99TlzRpUAE">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Dead Phone Repair</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Troubleshooting phones that won't turn on.
+                </p>
+              </div>
+            </div>
+            <!-- Card 10 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col gap-space-md">
+              <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                <img class="w-full h-full object-cover"
+                  data-alt="Organized tray of precision mobile repair screwdrivers, SIM ejector pins, flex cables, and diagnostic tools on a clean workbench next to a smartphone, bright modern electronics shop aesthetic."
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4zcQAm7g0CWXKAr3XaatHSy2vRUWDiPVFYp4-394QpVDWBWU0CYUmCnjmerZKph8h1m4lsWzYOTG1hvnv4YwhQXsvqaPLTrJarlIGaBnd_QSOK_cDDOnGslpvaO8KELiQUq3M83aOvT2q3_fTPWdwdc-ulIOPvpz_N5SnbRKFjolqgD_Dbng8F0vu9GaoctDnWxTBy1dhKGV8U0T2wvBIX6ZEwZalLEx8b48vJpk">
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Other Mobile Problems</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Solutions for additional hardware faults.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 3. TECHNICIAN PROFILE -->
+      <section class="w-full bg-surface-container-low py-space-2xl md:py-space-3xl lg:py-space-4xl" id="about">
+        <div class="max-w-[1200px] mx-auto px-[20px] md:px-[28px] lg:px-[44px]">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+            <div class="lg:col-span-5">
+              <div
+                class="w-full aspect-[4/5] rounded-2xl bg-surface-container flex flex-col items-center justify-center gap-space-md p-space-xl shadow-md">
+              <img
+  src="https://res.cloudinary.com/dehzenar0/image/upload/f_auto,q_auto:low,w_800/lalu_nkmt09.png"
+  alt="Lalu Kastor - Mobile Repair Technician"
+  class="w-full h-full object-cover rounded-xl"
+/> 
+              </div>
+            </div>
+            <div class="lg:col-span-7 flex flex-col gap-space-lg">
+              <span class="font-label-md text-label-md text-primary uppercase tracking-wider">MEET OUR EXPERT</span>
+              <h2
+                class="font-headline-lg-mobile text-headline-lg-mobile lg:font-headline-lg lg:text-headline-lg text-on-surface">
+                Tanish Kastor
+              </h2>
+              <p class="font-body-lg text-body-lg text-on-surface-variant">
+                Specialized in mobile motherboard repairing and hardware troubleshooting, with 3 years of hands-on
+                experience.
+              </p>
+              <div class="flex flex-col gap-space-md pt-space-xs">
+                <div class="flex items-center gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined">schedule</span>
+                  </div>
+                  <span class="font-label-lg text-label-lg text-on-surface">3 Years Practical Experience</span>
+                </div>
+                <div class="flex items-center gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined">school</span>
+                  </div>
+                  <span class="font-label-lg text-label-lg text-on-surface">Certified by The Bharat Mobile Institute,
+                    India</span>
+                </div>
+                <div class="flex items-center gap-space-md bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+                  <div
+                    class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                    <span class="material-symbols-outlined">memory</span>
+                  </div>
+                  <span class="font-label-lg text-label-lg text-on-surface">Motherboard Repairing Specialist</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 4. MOBILES & ACCESSORIES -->
+      <section class="w-full bg-surface-container-lowest py-space-2xl md:py-space-3xl lg:py-space-4xl" id="products">
+        <div class="max-w-[1200px] mx-auto px-[20px] md:px-[28px] lg:px-[44px]">
+          <div class="flex flex-col gap-space-sm mb-space-2xl max-w-2xl">
+            <span class="font-label-md text-label-md text-primary uppercase tracking-wider">02 / PRODUCTS</span>
+            <h2
+              class="font-headline-lg-mobile text-headline-lg-mobile lg:font-headline-lg lg:text-headline-lg text-on-surface">
+              Mobiles &amp; Accessories
+            </h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+              Everything you need for your smartphone, all in one place.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+            <!-- Product 1 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-md">
+              <div class="flex flex-col gap-space-md">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover"
+                    data-alt="Sleek modern smartphones displayed upright on a clean minimalist white and light blue retail counter, soft studio lighting, crisp reflections, contemporary mobile store aesthetic."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxaSWykDuyzMFjgv6rktFBDKA4LafIycgi0JcHdKASAzRLK1gTyoor51uO64pjYEmQVWnVTnZ36qUAx5blufZJczhJ0d9jwcOFIAxiq7zFmu94etDlvki3N0iiWZfUPvcbkaUEiI5_ytScmgCgSdpFuyUunR9UIplh5k6qmezHmE-f46J5f3l0DFjgaCu7e_e5G2AdhVjQCGMbTD6t9foPqgpndSg35P4le8ePDao">
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">New Smartphones</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Latest models from trusted mobile brands.
+                  </p>
+                </div>
+              </div>
+              <a class="inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary hover:bg-primary-container px-space-md py-space-sm rounded-xl font-label-lg text-label-lg transition-colors"
+                href="https://wa.me/918319875589?text=Hi%2C%20I%20want%20to%20inquire%20about%20New%20Smartphones"
+                rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                <span>Inquire on WhatsApp</span>
+              </a>
+            </div>
+            <!-- Product 2 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-md">
+              <div class="flex flex-col gap-space-md">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover"
+                    data-alt="Carefully inspected pre-owned smartphones in pristine condition arranged neatly on a bright blue-tinted display tray, clean retail lighting, trustworthy electronics shop photography."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOIe8AyB96OI3iXRIY1WbHfR-XhZ2z02csn-7bCQhHGGTj0tDRcR4PvTtwNSAq3on3FBhcrTDbfC7WD5tcpaGzRRbjvqY57gWWIc9fm2YWLs_luQhtKMgwpbdVNkdaf_4CpT84C81IK88iX6vf5scIKOinxz4WL7h3wOqLqMpM34MhF9Ijqo6caTb3TRMNZXTshmDC-rgB7AA4nJxHKjdrYGeo8HyQqlyIQUCb3oQ">
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Second-hand Smartphones</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Quality-checked used phones at great
+                    value.</p>
+                </div>
+              </div>
+              <a class="inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary hover:bg-primary-container px-space-md py-space-sm rounded-xl font-label-lg text-label-lg transition-colors"
+                href="https://wa.me/918319875589?text=Hi%2C%20I%20want%20to%20inquire%20about%20Second-hand%20Smartphones"
+                rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                <span>Inquire on WhatsApp</span>
+              </a>
+            </div>
+            <!-- Product 3 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-md">
+              <div class="flex flex-col gap-space-md">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover"
+                    data-alt="Wireless earbuds, neckband earphones, and over-ear headphones arranged cleanly on a light blue and white surface, soft shadows, modern tech accessories photography."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj3KRQfr5sImRmSznFtkSAuvauyqUlMfjTtfBh2d2wRv6a1Q2DtyLa8pKraLtqy-_va-zXihk4LuVnS5jw3FwZ0Z4V8iGR-5TpxqccAOp1CIs27LFkTYuU8VHrVyr9jhjzJbjiDCEDmhTCcXIJQ_Dw6q0MeS2ngyWcUCwNmMu8jsj1__7dJ7uBTDGfCepegABc9d8lNLxN3mX4R45VqOn6Brs5CQBSnUs-Iwg6G1A">
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Earphones &amp; Headphones</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Wired and wireless audio for clear sound.
+                  </p>
+                </div>
+              </div>
+              <a class="inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary hover:bg-primary-container px-space-md py-space-sm rounded-xl font-label-lg text-label-lg transition-colors"
+                href="https://wa.me/918319875589?text=Hi%2C%20I%20want%20to%20inquire%20about%20Earphones%20%26%20Headphones"
+                rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                <span>Inquire on WhatsApp</span>
+              </a>
+            </div>
+            <!-- Product 4 -->
+            <div
+              class="bg-surface-container-low rounded-2xl p-space-md shadow-sm hover:shadow-md transition-all flex flex-col justify-between gap-space-md">
+              <div class="flex flex-col gap-space-md">
+                <div class="w-full aspect-[4/3] rounded-xl overflow-hidden bg-surface-container">
+                  <img class="w-full h-full object-cover"
+                    data-alt="Fast-charging wall adapters and braided USB-C and Lightning data cables neatly arranged on a clean white desk with soft blue accents, crisp product photography."
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAKTi-qBXikmSdSeKBD7lZLdP2AgiqAYV3neb8UaoMa4L5rfWzwfQphbd3_Mb8xPJmYVmJfKjkJjqHvAo_HAB_kE2uM2Des6DJ1f_11pkn9U_ENytrqJgp3a7Tby5hpJD03Dy8aFORlWTLoz5rix1o9q_0Pq9D8AMnFxrZg7enLgaqK6tUqZKUS6pmGXzWUs-WSCf_YVqV12wu9cSU4yXuI4U-m_MsmlYrLNpszBhk">
+                </div>
+                <div class="flex flex-col gap-space-xs">
+                  <h3 class="font-headline-sm text-headline-sm text-on-surface">Chargers &amp; Data Cables</h3>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Durable fast chargers and reliable
+                    cables.</p>
+                </div>
+              </div>
+              <a class="inline-flex items-center justify-center gap-space-xs bg-primary text-on-primary hover:bg-primary-container px-space-md py-space-sm rounded-xl font-label-lg text-label-lg transition-colors"
+                href="https://wa.me/918319875589?text=Hi%2C%20I%20want%20to%20inquire%20about%20Chargers%20%26%20Data%20Cables"
+                rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[18px]">chat</span>
+                <span>Inquire on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 5. OLD PHONE BUYING & SELLING -->
+      <section class="w-full bg-surface-container py-space-2xl md:py-space-3xl lg:py-space-4xl">
+        <div class="max-w-[1200px] mx-auto px-[20px] md:px-[28px] lg:px-[44px]">
+          <div class="flex flex-col gap-space-sm mb-space-2xl max-w-2xl">
+            <span class="font-label-md text-label-md text-primary uppercase tracking-wider">03 / BUY &amp; SELL</span>
+            <h2
+              class="font-headline-lg-mobile text-headline-lg-mobile lg:font-headline-lg lg:text-headline-lg text-on-surface">
+              Your Old Phone Still Has Value!
+            </h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+              Looking to upgrade your smartphone? Sell your old phone at a suitable price or explore affordable
+              second-hand phones.
+            </p>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg">
+            <div
+              class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-md flex flex-col justify-between gap-space-lg">
+              <div class="flex flex-col gap-space-md">
+                <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[28px]">sell</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-on-surface">Sell Your Old Phone</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Get a suitable offer for your used smartphone based on its condition and market value.
+                </p>
+              </div>
+              <div>
+                <a class="inline-flex items-center gap-space-sm bg-primary text-on-primary hover:bg-primary-container px-space-lg py-space-md rounded-xl font-label-lg text-label-lg transition-colors"
+                  href="https://wa.me/918319875589?text=Hi%2C%20I%20want%20to%20sell%20my%20old%20phone"
+                  rel="noopener noreferrer" target="_blank">
+                  <span>Get a Selling Quote</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+            <div
+              class="bg-surface-container-lowest rounded-2xl p-space-xl shadow-md flex flex-col justify-between gap-space-lg">
+              <div class="flex flex-col gap-space-md">
+                <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center">
+                  <span class="material-symbols-outlined text-[28px]">smartphone</span>
+                </div>
+                <h3 class="font-headline-md text-headline-md text-on-surface">Buy Used Smartphones</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant">
+                  Explore affordable second-hand smartphones. Contact us to check available models.
+                </p>
+              </div>
+              <div>
+                <a class="inline-flex items-center gap-space-sm bg-primary text-on-primary hover:bg-primary-container px-space-lg py-space-md rounded-xl font-label-lg text-label-lg transition-colors"
+                  href="https://wa.me/918319875589?text=Hi%2C%20I%20want%20to%20explore%20used%20smartphones"
+                  rel="noopener noreferrer" target="_blank">
+                  <span>Explore Used Phones</span>
+                  <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 6. WHY CHOOSE US -->
+      <section class="w-full bg-surface-container-low py-space-2xl md:py-space-3xl lg:py-space-4xl">
+        <div class="max-w-[1200px] mx-auto px-[20px] md:px-[28px] lg:px-[44px]">
+          <div class="flex flex-col gap-space-sm mb-space-2xl max-w-2xl">
+            <span class="font-label-md text-label-md text-primary uppercase tracking-wider">04 / OUR PROMISE</span>
+            <h2
+              class="font-headline-lg-mobile text-headline-lg-mobile lg:font-headline-lg lg:text-headline-lg text-on-surface">
+              Why Choose Maa Sheetla Mobile?
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg">
+            <div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex items-start gap-space-md">
+              <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined">engineering</span>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Experienced Technician</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">3 years of practical hands-on repair
+                  expertise.</p>
+              </div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex items-start gap-space-md">
+              <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined">developer_board</span>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Motherboard Repairing Expertise</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Precision chip-level diagnosis and hardware
+                  fixes.</p>
+              </div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex items-start gap-space-md">
+              <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined">verified_user</span>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Certified Professional</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Trained &amp; certified by The Bharat
+                  Mobile Institute, India.</p>
+              </div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex items-start gap-space-md">
+              <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined">payments</span>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Affordable Solutions</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Honest, transparent pricing for every
+                  repair.</p>
+              </div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex items-start gap-space-md">
+              <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined">phonelink_setup</span>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Old &amp; Latest Mobile Support</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Complete care for all major smartphone
+                  brands.</p>
+              </div>
+            </div>
+            <div class="bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm flex items-start gap-space-md">
+              <div class="w-12 h-12 rounded-xl bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                <span class="material-symbols-outlined">headphones</span>
+              </div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Mobile Accessories Available</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Genuine chargers, cables, earphones, and
+                  more.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 7. CONTACT -->
+      <section class="w-full bg-surface-container-lowest py-space-2xl md:py-space-3xl lg:py-space-4xl" id="contact">
+        <div class="max-w-[1200px] mx-auto px-[20px] md:px-[28px] lg:px-[44px]">
+          <div class="flex flex-col gap-space-sm mb-space-2xl max-w-2xl">
+            <span class="font-label-md text-label-md text-primary uppercase tracking-wider">05 / CONTACT</span>
+            <h2
+              class="font-headline-lg-mobile text-headline-lg-mobile lg:font-headline-lg lg:text-headline-lg text-on-surface">
+              Visit Our Shop
+            </h2>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-space-2xl items-start">
+            <!-- Left: Contact Details -->
+            <div class="flex flex-col gap-space-md">
+              <div class="flex items-start gap-space-md bg-surface-container-low p-space-md rounded-xl">
+                <div
+                  class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined">storefront</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-md text-label-md text-on-surface-variant">Business Name</span>
+                  <span class="font-headline-sm text-headline-sm text-on-surface">Maa Sheetla Mobile</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-md bg-surface-container-low p-space-md rounded-xl">
+                <div
+                  class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined">location_on</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-md text-label-md text-on-surface-variant">Address</span>
+                  <span class="font-body-md text-body-md text-on-surface">Near Bus Stand, Hinota Kalan, Damoh, Madhya
+                    Pradesh – 470775, India.</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-md bg-surface-container-low p-space-md rounded-xl">
+                <div
+                  class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined">call</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-md text-label-md text-on-surface-variant">Phone</span>
+                  <span class="font-body-md text-body-md text-on-surface">+91 83198 75589</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-md bg-surface-container-low p-space-md rounded-xl">
+                <div
+                  class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined">chat</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-md text-label-md text-on-surface-variant">WhatsApp</span>
+                  <span class="font-body-md text-body-md text-on-surface">+91 83198 75589</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-space-md bg-surface-container-low p-space-md rounded-xl">
+                <div
+                  class="w-10 h-10 rounded-lg bg-primary-fixed text-primary flex items-center justify-center shrink-0">
+                  <span class="material-symbols-outlined">schedule</span>
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-md text-label-md text-on-surface-variant">Opening Hours</span>
+                  <span class="font-body-md text-body-md text-on-surface">9:00 AM to 9:00 PM (Monday–Sunday)</span>
+                </div>
+              </div>
+              <div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+                <a class="inline-flex items-center gap-space-sm bg-surface-container text-primary hover:bg-primary-fixed px-space-lg py-space-md rounded-xl font-label-lg text-label-lg transition-colors"
+                  href="tel:+918319875589">
+                  <span class="material-symbols-outlined text-[20px]">call</span>
+                  <span>Call Now</span>
+                </a>
+                <a class="inline-flex items-center gap-space-sm bg-primary text-on-primary hover:bg-primary-container px-space-lg py-space-md rounded-xl font-label-lg text-label-lg shadow-md transition-colors"
+                  href="https://wa.me/918319875589" rel="noopener noreferrer" target="_blank">
+                  <span class="material-symbols-outlined text-[20px]">chat</span>
+                  <span>Chat on WhatsApp</span>
+                </a>
+              </div>
+            </div>
+            <!-- Right: Location Card -->
+            <div class="bg-surface-container-low rounded-2xl p-space-lg shadow-md flex flex-col gap-space-lg">
+<div class="w-full h-72 md:h-80 rounded-xl overflow-hidden bg-surface-container">
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d473039.79439467244!2d79.14440320234795!3d24.21491590980273!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39826b003579ed1f%3A0xe36588649b15048d!2sMaa%20sheetla%20Mobile%20center!5e1!3m2!1sen!2sin!4v1795522082832!5m2!1sen!2sin"
+        class="w-full h-full"
+        style="border: 0;"
+        allowfullscreen
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin">
+    </iframe>
+</div>
+              <div class="flex flex-col gap-space-xs">
+                <h3 class="font-headline-sm text-headline-sm text-on-surface">Find Us in Hinota Kalan</h3>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">Near Bus Stand, Hinota Kalan, Damoh, Madhya
+                  Pradesh 470775, India</p>
+              </div>
+              <a class="inline-flex items-center justify-center gap-space-sm bg-primary text-on-primary hover:bg-primary-container px-space-lg py-space-md rounded-xl font-label-lg text-label-lg transition-colors"
+                href="https://maps.app.goo.gl/nGSpnb3sKeAA2Mej8"
+                rel="noopener noreferrer" target="_blank">
+                <span class="material-symbols-outlined text-[20px]">directions</span>
+                <span>Get Google Maps Directions</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 8. FLOATING WHATSAPP BUTTON -->
+      <a aria-label="Chat on WhatsApp"
+        class="fixed bottom-6 right-6 z-40 inline-flex items-center gap-space-sm bg-primary text-on-primary hover:bg-primary-container px-space-lg py-space-md rounded-full shadow-xl hover:scale-105 transition-all font-label-lg text-label-lg"
+        href="https://wa.me/918319875589" rel="noopener noreferrer" target="_blank">
+        <span class="material-symbols-outlined text-[22px]">chat</span>
+        <span class="hidden sm:inline">WhatsApp</span>
+      </a>
+    </div>
+  </main>
+  <footer class="w-full bg-inverse-surface text-inverse-on-surface py-space-3xl">
+    <div class="max-w-7xl mx-auto px-gutter lg:px-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl">
+        <div class="flex flex-col gap-space-md">
+          <div class="flex items-center gap-space-sm"><span
+              class="material-symbols-outlined text-inverse-primary">smartphone</span><span
+              class="font-headline-sm text-headline-sm text-inverse-on-surface">Maa Sheetla Mobile</span></div>
+          <p class="font-body-sm text-body-sm text-inverse-on-surface/80">Your trusted neighborhood specialist for fast,
+            transparent smartphone repairs, genuine accessories, and reliable mobile devices.</p><a
+            class="inline-flex items-center gap-space-sm text-inverse-primary hover:underline font-label-lg text-label-lg mt-space-xs"
+            href="https://wa.me/918319875589" rel="noopener noreferrer" target="_blank"><span
+              class="material-symbols-outlined text-[18px]">chat</span><span>WhatsApp: +91 83198 75589</span></a>
+        </div>
+        <div>
+          <h3 class="font-label-lg text-label-lg text-inverse-on-surface mb-space-md">Quick Navigation</h3>
+          <ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-inverse-on-surface/80">
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="home" href="#">Home</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="services" href="#services">Services</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="products" href="#products">Products</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="about-us" href="#about">About Us</a></li>
+            <li><a class="hover:text-inverse-primary transition-colors" data-path="contact" href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-label-lg text-label-lg text-inverse-on-surface mb-space-md">Main Services</h3>
+          <ul class="flex flex-col gap-space-sm font-body-sm text-body-sm text-inverse-on-surface/80">
+            <li>Screen &amp; Display Replacement</li>
+            <li>Battery &amp; Charging Port Repair</li>
+            <li>Software &amp; Unlocking</li>
+            <li>Water Damage Recovery</li>
+            <li>Genuine Mobile Accessories</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-label-lg text-label-lg text-inverse-on-surface mb-space-md">Visit &amp; Contact</h3>
+          <div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-inverse-on-surface/80">
+            <p class="flex items-start gap-space-sm"><span
+                class="material-symbols-outlined text-[18px] text-inverse-primary shrink-0 mt-0.5">location_on</span><span>Near
+                Bus Stand, Hinota Kalan, Damoh, Madhya Pradesh – 470775, India</span></p>
+            <p class="flex items-center gap-space-sm"><span
+                class="material-symbols-outlined text-[18px] text-inverse-primary shrink-0">call</span><span>+91 83198
+                75589</span></p>
+            <p class="flex items-center gap-space-sm"><span
+                class="material-symbols-outlined text-[18px] text-inverse-primary shrink-0">schedule</span><span>9:00 AM to 9:00 PM (Monday–Sunday)</span></p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-space-2xl pt-space-lg border-t border-inverse-on-surface/20 flex flex-col sm:flex-row items-center justify-between gap-space-md font-label-sm text-label-sm text-inverse-on-surface/70">
+        <span>© 2026 Maa Sheetla Mobile. All rights reserved.</span><span>Hinota Kalan, Damoh, MP</span></div>
+    </div>
+  </footer>
+</body>
+
+</html>
